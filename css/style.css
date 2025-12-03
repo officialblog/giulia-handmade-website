@@ -74,10 +74,14 @@ header .container {
 }
 
 .logo {
-    font-size: clamp(1.3rem, 4vw, 1.8rem);
-    font-weight: 500;
-    letter-spacing: 2px;
-    color: var(--color-deep-brown);
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
 }
 
 nav a {
@@ -292,30 +296,32 @@ nav a:hover {
     white-space: nowrap;
     padding-bottom: var(--spacing-sm);
     -webkit-overflow-scrolling: touch;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .filter-btn {
-    background: var(--color-white);
-    border: 2px solid var(--color-deep-brown);
-    padding: 12px 28px;
-    margin: 0 8px;
-    border-radius: 30px;
+    background: transparent;
+    border: 1px solid var(--color-deep-brown);
+    padding: 10px 24px;
+    border-radius: 50px;
     cursor: pointer;
     font-family: var(--font-sans);
-    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    font-size: 0.9rem;
     font-weight: 500;
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    color: var(--color-deep-brown);
 }
 
 .filter-btn.active,
 .filter-btn:hover {
-    background-color: var(--color-terracotta);
-    border-color: var(--color-terracotta);
-    color: white;
+    background-color: var(--color-deep-brown);
+    color: var(--color-white);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(199, 121, 102, 0.3);
+    box-shadow: 0 4px 12px rgba(93, 78, 55, 0.2);
 }
 
 .product-grid {

@@ -130,6 +130,7 @@ function renderGrid(items) {
                 <img src="${imagePath}" alt="${product.name}" class="product-img">
                 <div class="product-info">
                     <h3 class="product-name">${product.name}</h3>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 5px;">Clicca per i dettagli</p>
                 </div>
             </div>
         `;
