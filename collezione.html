@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giulia Handmade - Borsette Artigianali Fatte a Mano</title>
-    <meta name="description"
-        content="Borsette uniche fatte a mano da Giulia. Ogni pezzo è realizzato con cura e passione, intrecciato a mano con materiali di alta qualità.">
+    <title>Collezione - Giulia Handmade</title>
+    <meta name="description" content="Esplora la collezione completa di borsette artigianali fatte a mano da Giulia.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,49 +29,24 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="logo">Giulia Handmade</div>
+            <a href="index.html" class="logo">Giulia Handmade</a>
             <nav>
-                <a href="#catalogo">Collezione</a>
+                <a href="index.html">Home</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Borsette Uniche Fatte a Mano</h1>
-            <p class="hero-subtitle">Ogni pezzo è realizzato con passione e cura artigianale</p>
-            <a href="collezione.html" class="btn-primary">Scopri la Collezione</a>
-        </div>
-    </section>
-
-    <!-- Chi Sono Section -->
-    <section id="chi-sono">
+    <!-- Collection Hero -->
+    <section id="collection-hero">
         <div class="container">
-            <div class="chi-sono-content">
-                <h2>Ciao, sono Giulia</h2>
-                <p>Sono la creatrice di borsette uniche, realizzate interamente a mano con materiali di alta qualità.
-                </p>
-                <p>Ogni borsa è intrecciata con cura e passione da me a mano, per offrire un accessorio elegante e
-                    originale che completi ogni tuo look.</p>
-                <p class="missione"><strong>La mia missione</strong> è creare pezzi esclusivi che uniscano stile,
-                    funzionalità e artigianalità, realizzati con amore in ogni dettaglio.</p>
-            </div>
+            <h1>La Collezione</h1>
+            <p>Ogni borsetta è un pezzo unico, fatto a mano con amore e dedizione</p>
         </div>
     </section>
-
-    <!-- Marquee Section -->
-    <div class="marquee-container">
-        <div class="marquee">
-            <span>Fatto a Mano in Italia — Design Unico — Artigianalità — </span>
-            <span>Fatto a Mano in Italia — Design Unico — Artigianalità — </span>
-        </div>
-    </div>
 
     <!-- Catalog Section -->
     <section id="catalogo">
         <div class="container">
-            <h2>La Collezione</h2>
             <p class="catalog-intro">Esplora la collezione e trova la borsetta perfetta per te. Ogni modello è pensato
                 per aggiungere un tocco speciale al tuo stile personale.</p>
 
@@ -105,13 +79,22 @@
 
             <div class="product-details">
                 <h2 id="modal-title">Nome Prodotto</h2>
-                <div class="tags" id="modal-tags">
-                    <!-- Tags injected via JS -->
+                <div class="product-meta">
+                    <div class="meta-item">
+                        <strong>Materiale:</strong> <span id="modal-material"></span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>Colori:</strong> <span id="modal-colors"></span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>Stile:</strong> <span id="modal-style"></span>
+                    </div>
                 </div>
+                <div class="tags" id="modal-tags"></div>
                 <p id="modal-description">Descrizione del prodotto.</p>
 
                 <a href="#" id="modal-buy-btn" class="btn-buy" target="_blank">
-                    Acquista su Vinted <i class="fa-solid fa-shopping-bag"></i>
+                    Verifica la disponibilità su Vinted <i class="fa-solid fa-shopping-bag"></i>
                 </a>
             </div>
         </div>
@@ -129,9 +112,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
-    <script src="https://unpkg.com/split-type"></script>
     <script src="js/app.js"></script>
 </body>
 

@@ -235,6 +235,47 @@ nav a:hover {
     color: var(--color-deep-brown);
 }
 
+/* Collection Hero */
+#collection-hero {
+    padding: calc(var(--spacing-xl) + 60px) 0 var(--spacing-xl);
+    background-color: var(--color-warm-beige);
+    text-align: center;
+}
+
+#collection-hero h1 {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-deep-brown);
+}
+
+#collection-hero p {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    color: var(--color-rose-gold);
+    font-style: italic;
+}
+
+/* Product Meta */
+.product-meta {
+    margin: var(--spacing-md) 0;
+    padding: var(--spacing-sm);
+    background-color: var(--color-warm-beige);
+    border-radius: 4px;
+}
+
+.meta-item {
+    margin-bottom: var(--spacing-xs);
+    font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+}
+
+.meta-item strong {
+    color: var(--color-deep-brown);
+}
+
+.meta-item span {
+    color: var(--color-rose-gold);
+    text-transform: capitalize;
+}
+
 .catalog-intro {
     text-align: center;
     font-size: clamp(1rem, 3vw, 1.2rem);
