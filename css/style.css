@@ -106,7 +106,7 @@ nav a:hover {
     justify-content: center;
     text-align: center;
     background: linear-gradient(rgba(93, 78, 55, 0.3), rgba(93, 78, 55, 0.3)),
-        url('https://TriSsSsSsS.github.io/giulia-handmade-assets/logo/profile.jpg');
+        url('https://TriSsSsSsS.github.io/giulia-handmade-assets/logo/profile.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -569,4 +569,10 @@ footer a:hover {
         right: var(--spacing-sm);
     }
 }
-@media (max-width: 768px) { #hero { background-attachment: scroll; background-position: center top; } }
+
+@media (max-width: 768px) {
+    #hero {
+        background-attachment: scroll;
+        background-position: center top;
+    }
+}
