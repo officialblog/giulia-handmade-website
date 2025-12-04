@@ -99,12 +99,12 @@ function initScrollAnimations() {
 // Fetch Data
 async function fetchProducts() {
     try {
-        const response = await fetch(`${ASSETS_BASE_URL}/json/products.json`);
+        const response = await fetch(`${ASSETS_BASE_URL}/json/products.json?t=${Date.now()}`);
         products = await response.json();
         renderGrid(products);
     } catch (error) {
         console.error('Errore nel caricamento dei prodotti:', error);
-        gridElement.innerHTML = '<p style="text-align:center; width:100%;">Impossibile caricare i prodotti. Riprova più tardi.</p>';
+        gridElement.innerHTML = '<p style="text-align:center; width:100%; color: red;">Impossibile caricare i prodotti. Riprova più tardi.</p>';
     } finally {
         console.log('Fetch products completed. Products count:', products.length);
         if (products.length === 0) {

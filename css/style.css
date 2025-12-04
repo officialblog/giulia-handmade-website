@@ -82,6 +82,7 @@ header .container {
     height: 60px;
     width: auto;
     object-fit: contain;
+    border-radius: 50%;
 }
 
 nav a {
