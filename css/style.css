@@ -789,49 +789,86 @@ footer a:hover {
 
 .featured-swiper {
     margin-bottom: var(--spacing-lg);
-    padding: var(--spacing-md) 0;
+    padding: var(--spacing-xl) 0;
+    overflow: visible;
+}
+
+.featured-swiper .swiper-slide {
+    width: 300px;
+    height: 400px;
 }
 
 .featured-slide {
     background: var(--color-white);
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    height: auto;
-}
-
-.featured-slide:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    height: 100%;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: all 0.4s ease;
 }
 
 .featured-slide img {
     width: 100%;
-    aspect-ratio: 1;
+    height: 100%;
     object-fit: cover;
+    transition: transform 0.4s ease;
 }
 
-.featured-slide-info {
-    padding: var(--spacing-md);
+.featured-slide:hover img {
+    transform: scale(1.1);
+}
+
+.featured-slide-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: var(--spacing-lg) var(--spacing-md);
     text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
 }
 
-.featured-slide-info h3 {
+.featured-slide:hover .featured-slide-overlay {
+    transform: translateY(0);
+}
+
+.featured-slide-overlay h3 {
     font-family: var(--font-serif);
-    font-size: clamp(1.2rem, 3vw, 1.4rem);
-    color: var(--color-deep-brown);
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
+    color: white;
     margin-bottom: var(--spacing-xs);
 }
 
-.featured-slide-info p {
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
-    color: var(--color-rose-gold);
+.featured-slide-overlay p {
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+    color: var(--color-warm-beige);
+    text-transform: capitalize;
 }
 
 .view-all-container {
     text-align: center;
-    margin-top: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.collection-hint {
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+    color: var(--color-rose-gold);
+    font-style: italic;
+    margin-bottom: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+    .collection-hint {
+        font-size: 0.9rem;
+    }
+    
+    .featured-swiper .swiper-slide {
+        width: 250px;
+        height: 350px;
+    }
 }
 
 .swiper-button-next,

@@ -194,8 +194,8 @@ function setupEventListeners() {
 
 // Render Featured Products Carousel
 function renderFeaturedProducts(items) {
-    // Show max 6 featured products
-    const featuredItems = items.slice(0, 6);
+    // Show max 8 featured products
+    const featuredItems = items.slice(0, 8);
     
     featuredItems.forEach(product => {
         const imagePath = product.images && product.images.length > 0
@@ -207,38 +207,45 @@ function renderFeaturedProducts(items) {
         slide.innerHTML = `
             <div class="featured-slide">
                 <img src="${imagePath}" alt="${product.name}">
-                <div class="featured-slide-info">
+                <div class="featured-slide-overlay">
                     <h3>${product.name}</h3>
                     <p>${product.material || 'Fatto a mano'}</p>
                 </div>
             </div>
         `;
         
-        slide.addEventListener('click', () => openModal(product));
+        // NO click handler - just for viewing
         featuredWrapper.appendChild(slide);
     });
 
-    // Initialize Swiper
+    // Initialize Swiper with autoplay and elegant effect
     setTimeout(() => {
         new Swiper('.featured-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 20,
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
             loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            coverflowEffect: {
+                rotate: 20,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+            },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
+                dynamicBullets: true,
             },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                },
-                900: {
-                    slidesPerView: 3,
-                },
             },
         });
     }, 100);
