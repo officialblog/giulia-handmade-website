@@ -580,20 +580,24 @@ footer a:hover {
     }
     
     .hero-content {
-        background: rgba(250, 248, 245, 0.95);
-        padding: var(--spacing-lg) var(--spacing-md);
-        border-radius: 8px;
-        backdrop-filter: blur(10px);
+        background: transparent;
+        padding: var(--spacing-md);
     }
     
     .hero-content h1 {
-        color: var(--color-deep-brown);
-        text-shadow: none;
+        color: var(--color-cream);
+        text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.8),
+                     0 0 40px rgba(0, 0, 0, 0.5);
     }
     
     .hero-content p {
-        color: var(--color-rose-gold);
-        text-shadow: none;
+        color: var(--color-cream);
+        text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.8),
+                     0 0 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    .btn-primary {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
 
     .chi-sono-grid {

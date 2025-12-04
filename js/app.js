@@ -262,6 +262,15 @@ function openModal(product) {
     document.getElementById('modal-title').textContent = product.name;
     document.getElementById('modal-description').textContent = product.description;
 
+    // Product Meta (materiale, colori, stile)
+    const modalMaterial = document.getElementById('modal-material');
+    const modalColors = document.getElementById('modal-colors');
+    const modalStyle = document.getElementById('modal-style');
+    
+    if (modalMaterial) modalMaterial.textContent = product.material || 'N/A';
+    if (modalColors) modalColors.textContent = product.colors ? product.colors.join(', ') : 'N/A';
+    if (modalStyle) modalStyle.textContent = product.style ? product.style.join(', ') : 'N/A';
+
     // Tags
     const tagsContainer = document.getElementById('modal-tags');
     tagsContainer.innerHTML = '';
