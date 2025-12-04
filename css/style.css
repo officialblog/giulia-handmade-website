@@ -109,14 +109,14 @@ nav a:hover {
     background: linear-gradient(rgba(93, 78, 55, 0.3), rgba(93, 78, 55, 0.3)),
         url('https://TriSsSsSsS.github.io/giulia-handmade-assets/logo/profile.png');
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-attachment: fixed;
     position: relative;
     padding: var(--spacing-xl) var(--spacing-sm);
     /* 
-       Per gestire posizione e dimensione dell'immagine di sfondo:
-       - background-position: center; (puoi cambiare 'center' con 'top', 'bottom', o '50% 50%')
-       - background-size: cover; (puoi cambiare 'cover' con 'contain' o una percentuale es. '100%')
+       To manage the position and size of the background image:
+       - background-position: center; (you can change 'center' to 'top', 'bottom', or '50% 50%')
+       - background-size: cover; (you can change 'cover' to 'contain' or a percentage e.g. '100%')
     */
 }
 
@@ -579,6 +579,25 @@ footer a:hover {
 @media (max-width: 768px) {
     #hero {
         background-attachment: scroll;
-        background-position: center top;
+        background-position: center;
+        flex-direction: column;
+        padding-top: calc(var(--spacing-xl) + 80px);
+    }
+    
+    .hero-content {
+        background: rgba(250, 248, 245, 0.95);
+        padding: var(--spacing-lg) var(--spacing-md);
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+    }
+    
+    .hero-content h1 {
+        color: var(--color-deep-brown);
+        text-shadow: none;
+    }
+    
+    .hero-content p {
+        color: var(--color-rose-gold);
+        text-shadow: none;
     }
 }
