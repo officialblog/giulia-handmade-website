@@ -113,10 +113,9 @@ nav a:hover {
     justify-content: center;
     text-align: center;
     background: url('https://officialblog.github.io/giulia-handmade-assets/logo/profile.png');
-    background-size: 85%;
+    background-size: cover;
     background-position: center top;
     background-attachment: fixed;
-    background-repeat: no-repeat;
     position: relative;
     padding: var(--spacing-xl) var(--spacing-sm);
     padding-bottom: calc(var(--spacing-xl) * 2);
@@ -213,6 +212,8 @@ nav a:hover {
 .marquee {
     display: inline-block;
     animation: marquee 25s linear infinite;
+    padding-left: 0;
+    will-change: transform;
 }
 
 .marquee span {
@@ -222,6 +223,7 @@ nav a:hover {
     letter-spacing: 3px;
     margin-right: 80px;
     font-weight: 400;
+    padding: 0 20px;
 }
 
 @keyframes marquee {
