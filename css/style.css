@@ -767,6 +767,27 @@ footer a i {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+.btn-instagram {
+    background: linear-gradient(135deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    color: white;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(188, 24, 136, 0.3);
+}
+
+.btn-instagram:hover {
+    background: linear-gradient(135deg, #bc1888 0%,#cc2366 25%,#dc2743 50%,#e6683c 75%,#f09433 100%);
+    color: white;
+    box-shadow: 0 6px 20px rgba(188, 24, 136, 0.5);
+}
+
+.btn-instagram i {
+    font-size: 1.2rem;
+}
+
 /* Features Section */
 #features {
     padding: var(--spacing-lg) 0;
